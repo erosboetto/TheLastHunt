@@ -1,3 +1,4 @@
+import './MyNav.css';
 import { Navbar, Nav, Container, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -11,7 +12,7 @@ const MyNav = ({ searchQuery, setSearchQuery }) => {
     >
       <Container fluid>
         <Link to="/">
-          <Navbar.Brand>EpiBooks</Navbar.Brand>
+          <Navbar.Brand><span className="font-link">TheLastHunt</span></Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
