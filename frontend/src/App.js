@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import MyNav from './components/Navbar/MyNav'
 import MyFooter from './components/Footer/MyFooter'
+import Slide from './components/Slide/Slide'
+import Pianeti from './components/Galassia/Pianeti'
 // import Welcome from './components/Welcome'
 // import AllTheBooks from './components/AllTheBooks'
 import { Container } from 'react-bootstrap'
@@ -16,8 +18,7 @@ function App() {
     <BrowserRouter>
       <MyNav searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <Container>
-        <Routes>
-        </Routes>
+        <Pianeti />
       </Container>
       <MyFooter />
     </BrowserRouter>
