@@ -25,17 +25,12 @@ const CarouselComponent = () => {
                 alt={images.alt}
               />
           </Container>
-          <Container className='border'> 
+          <Container className='desc'> 
             <p>{images.descrizione}</p>
           </Container>
         </Carousel.Item>
       ))}
     </Carousel>
-    {/* {images.map((images, index) => (
-      <div key={index}>
-        
-      </div>
-    ))} */}
   </Container>
   );
 };

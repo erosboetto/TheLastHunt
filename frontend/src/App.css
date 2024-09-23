@@ -1,12 +1,8 @@
 html, main {
     margin: 0;
     padding: 0;
-    height: 100%;
     background-color: black;
-}
-
-#root {
-    height: 100%;
+    box-sizing: border-box;
 }
 
 .app-bg {
@@ -19,10 +15,15 @@ html, main {
     align-items: center;
     border-color: red;
     border-style: solid;
-    border-width: 5px;
-
+    border-width: 5px;   
+    position: relative;
+    overflow: visible;
 }
 
-.bg {
-    
-}
+/* .border{
+    width: 100%;
+    border-style: solid;
+    border-width: 5px;  
+    border-color: red;
+    height: 60%;
+} */
