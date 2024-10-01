@@ -6,10 +6,11 @@ html, main {
     background-position: center; /* L'immagine è centrata */
     background-repeat:repeat-y; /* L'immagine non si ripete */
     filter: saturate(85%);
+    overflow-x: hidden;
 }
 
 .app-bg {
-    /* color: white;  Imposta il testo bianco per contrasto */
+    color: white;
     height: 200vh; /* Altezza intera della viewport */
     width: 100vw;
     display: flex;
@@ -18,16 +19,9 @@ html, main {
     align-items: center;
     /* border-color: red;
     border-style: solid;
-    border-width: 5px;    */
+    border-width: 5px;   */
     position: relative;
     overflow: visible;
 }
 
-/* .border{
-    width: 100%;
-    border-style: solid;
-    border-width: 5px;  
-    border-color: red;
-    height: 60%;
-} */
  

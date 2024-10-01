@@ -1,5 +1,5 @@
 import './MyNav.css';
-import { Navbar, Nav, Container, Form } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import copertina from '../img/copertina.jpg'
 
@@ -25,8 +25,6 @@ const MyNav = () => {
             <span className="font-link">TheLastHunt</span>
           </Navbar.Brand>
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link to="/Personaggi">
               <div className="nav-link">Personaggi</div>
@@ -38,7 +36,6 @@ const MyNav = () => {
               <div className="nav-link">Supporto</div>
             </Link>
           </Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   )

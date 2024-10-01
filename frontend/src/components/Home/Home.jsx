@@ -1,14 +1,14 @@
 import React from 'react';
 import Carousel from '../Carousel/Carousel'
 import Play from '../Play/Play'
-import { Container } from 'react-bootstrap';
+import './Home.css'
 
 const Home = () => {
     return (
-    <Container>
-        <Carousel />
+    <div className='position' >
         <Play />
-    </Container>
+        <Carousel />
+    </div>
     );
   };
   
