@@ -1,8 +1,11 @@
 html, main {
     margin: 0;
     padding: 0;
-    background-color: black;
-    box-sizing: border-box;
+    background-image: url('./components/img/background.jpg'); /* Percorso dell'immagine locale */
+    background-size: cover; /* L'immagine copre tutto lo spazio disponibile */
+    background-position: center; /* L'immagine è centrata */
+    background-repeat:repeat-y; /* L'immagine non si ripete */
+    filter: saturate(85%);
 }
 
 .app-bg {
@@ -13,9 +16,9 @@ html, main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-color: red;
+    /* border-color: red;
     border-style: solid;
-    border-width: 5px;   
+    border-width: 5px;    */
     position: relative;
     overflow: visible;
 }
@@ -27,3 +30,4 @@ html, main {
     border-color: red;
     height: 60%;
 } */
+ 

@@ -1,41 +1,42 @@
 import './MyNav.css';
 import { Navbar, Nav, Container, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import copertina from '../img/copertina.jpg'
 
-const MyNav = ({ searchQuery, setSearchQuery }) => {
+const MyNav = () => {
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary mb-3"
-      bg="dark"
+      className="bg-body-dark mb-3"
+      bg="black"
       data-bs-theme="dark"
+      sticky='top'
     >
       <Container fluid>
         <Link to="/">
-          <Navbar.Brand><span className="font-link">TheLastHunt</span></Navbar.Brand>
+        <Navbar.Brand>
+            <img
+              alt=""
+              src={copertina}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+            <span className="font-link">TheLastHunt</span>
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/">
-              <div className="nav-link">Home</div>
+            <Link to="/Personaggi">
+              <div className="nav-link">Personaggi</div>
             </Link>
-            <Link to="/about">
-              <div className="nav-link">About</div>
+            <Link to="/Armi">
+              <div className="nav-link">Armi</div>
             </Link>
-            <Link to="/browse">
-              <div className="nav-link">Browse</div>
+            <Link to="/Supporto">
+              <div className="nav-link">Supporto</div>
             </Link>
-          </Nav>
-          <Nav className="ms-auto">
-            <Form.Group>
-              <Form.Control
-                type="search"
-                placeholder="Cerca un libro"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </Form.Group>
           </Nav>
         </Navbar.Collapse>
       </Container>

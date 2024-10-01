@@ -20,8 +20,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0.9em;
-    margin-top: 0.9em;
+    margin-left: 0.8em;
+    margin-top: 0.8em;
 }
 /* .icona:hover {
     transform: scale(1.2);
@@ -58,6 +58,7 @@
     transform: translate(-50%, -50%);
     z-index: 0;
     color: white;
+    margin-top: 0.3em;
   }
 
   .piattaforme {
@@ -70,7 +71,7 @@
     flex-direction: row;
   }
   .piattaforme li {
-    margin: 0 15px; /* Spazio tra le icone */
+    margin: 0 1em; /* Spazio tra le icone */
   }
   .piattaforme li:hover {
     transform: scale(1.2); /* Ingrandisce l'icona al passaggio del mouse */

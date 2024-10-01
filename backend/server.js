@@ -1,36 +1,31 @@
-import morgan from 'morgan'
-import helmet from 'helmet'
-/* import passport from 'passport'
-import GoogleStrategy from './config/passport.config.js' 
-import authorization from './middleware/authorization.js'; */
+//import supporto from './Api/Supporto.js'
 import cors from 'cors'
 import express from 'express'
-import 'dotenv/config'
 import mongoDbConnection from './db.js'
-import authRouter from './routes/authentication.router.js'
-import profileRoutes from './routes/profileRoutes.js'
-import experiencesRoutes from './routes/experiencesRoutes.js'
-
-import passport from 'passport'
-import googleStrategy from './configs/passport.config.js'
+// import Personaggi from '../frontend/src/components/Personaggi/Personaggi.jsx'
 
 const port = process.env.PORT || 5000
 const host = process.env.HOST || 'http://localhost:5000/'
 const server = express()
 
 server.use(express.json())
-server.use(cors()) 
-server.use(morgan("dev")) 
-/* server.use(helmet()) */
+server.use(cors())
 
-passport.use(googleStrategy)
+server.get('/api/faqs', (req, res) => {
+    const faqs = [
+      { question: 'Cos\'è React?', answer: 'React è una libreria JavaScript.' },
+      { question: 'Cos\'è MongoDB?', answer: 'MongoDB è un database NoSQL.' },
+    ];
+    res.json(faqs);
+  });
 
-// routers
-server.use('/auth', authRouter)
-server.use('/profile', profileRoutes)
-server.use('/experiences', experiencesRoutes) // mettere autenticazione almeno nella POST e in me
+//   server.get('/api/personaggi', (req, res) => {
+//     console.log("Personaggi");
+//   });
 
-
+//   server.get('/api/armi', (req, res) => {
+//     console.log("armi");
+//   });
 
 mongoDbConnection()
 
