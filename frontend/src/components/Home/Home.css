@@ -17,7 +17,7 @@
 .line{
     border-color: aqua;
     border-style: solid;
-    border-width: 3px;  
+    border-width: 0.2em;  
     width: 80%;
     margin-left: 10%;
     margin-bottom: 7%;
@@ -29,4 +29,42 @@
     0 0 0.8rem #13e3fe,
     0 0 2.8rem #13e3fe,
     inset 0 0 1.3rem #13e3fe;
+}
+.download{
+    /* border-color: yellow;
+    border-style: solid;
+    border-width: 5px; */
+    width: 80%;
+    height: 16%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.mainDiv{
+    border: 0.2rem solid #13e3fe;
+    border-radius: 1em;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #13e3fe,
+              0 0 .2rem #fff,
+              0 0 2rem #13e3fe,
+              0 0 0.8rem #13e3fe,
+              0 0 2.8rem #13e3fe,
+              inset 0 0 1.3rem #13e3fe;     
+    width: 20%;
+    height: 30%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: large;
+}
+.mainDiv:hover{
+    background-color: transparent;
+    border: 0.2rem solid #13e3fe;
+    transform: scale(1.1);
+}
+Link{
+    color: white;
+    text-decoration: none;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 import Play from '../Play/Play'
 import './Home.css'
 
@@ -17,6 +18,13 @@ const Home = () => {
                 Rischia tutto nei panni di Zara Valen, un intrepida cacciatrice di taglie in cerca di verità e giustizia, combatti, ruba e uccidi per riportare ordine nella galassia e diventare la più rinomata tra i cacciatori di taglie.
             </p> 
         </Container>
+        <div className='download'>
+            <Button className='mainDiv'>
+                <Link to="/Supporto/Req" className='link'>
+                    <h2>SCARICA ORA</h2>
+                </Link>
+            </Button>
+        </div>
     </div>
     );
   };
