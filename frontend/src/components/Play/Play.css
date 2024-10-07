@@ -1,5 +1,5 @@
 .cont {
-    height: 100vh;
+    height: 75vh;
     color: white;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@
 }
 .video-background {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 100vw;
     height: 70vh;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 
 const Armi = () => {
+    console.log("armi");
     return (
     <Container>
         <p>Armi</p>

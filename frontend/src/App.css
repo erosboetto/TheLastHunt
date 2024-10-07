@@ -1,7 +1,7 @@
 main {
     margin: 0;
     padding: 0;
-    background-image: url('./components/img/background.jpg'); /* Percorso dell'immagine locale */
+    background-image: url('./components/img/background_.jpg'); /* Percorso dell'immagine locale */
     background-size: cover; /* L'immagine copre tutto lo spazio disponibile */
     background-position: center; /* L'immagine è centrata */
     background-repeat:repeat-y; /* L'immagine non si ripete */
@@ -13,7 +13,7 @@ html{
 
 .app-bg {
     color: white;
-    height: 200vh; /* Altezza intera della viewport */
+    height: 150vh; /* Altezza intera della viewport */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,6 @@ html{
     border-width: 5px;   */
     position: relative;
     overflow: visible;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white; 
 }
-
- 

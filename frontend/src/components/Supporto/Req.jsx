@@ -1,17 +1,16 @@
-// FaqPage.js
 import React, { useEffect, useState } from 'react';
 import './Supporto.css'
 
-const FaqPage = () => {
-  const [faqs, setFaqs] = useState([]);
+const Requisiti = () => {
+  const [Requ, setRequ] = useState([]);
 
   // Chiamata API per ottenere le FAQ
-  const fetchFaqs = async () => {
+  const fetchRequ = async () => {
     console.log('supporto');
     try {
-      const response = await fetch('http://localhost:5000/api/faqs');
+      const response = await fetch('http://localhost:5000/api/requ');
       const data = await response.json();
-      setFaqs(data);
+      setRequ(data);
     } catch (error) {
       console.error('Errore nel recuperare le FAQ:', error);
     }
@@ -19,17 +18,17 @@ const FaqPage = () => {
 
   // Esegui la chiamata API quando il componente viene montato
   useEffect(() => {
-    fetchFaqs();
+    fetchRequ();
   }, []);
 
   return (
     <div className='div_color'>
-      <h1>Domande Frequenti</h1>
+      <h1>Requisiti</h1>
       <ul>
-        {faqs.map((faq, index) => (
+        {Requ.map((Reqs, index) => (
           <li key={index}>
-            <strong>{faq.question}</strong>
-            <p>{faq.answer}</p>
+            <strong>{Reqs.question}</strong>
+            <p>{Reqs.answer}</p>
           </li>
         ))}
       </ul>
@@ -37,4 +36,4 @@ const FaqPage = () => {
   );
 };
 
-export default FaqPage;
+export default Requisiti;
