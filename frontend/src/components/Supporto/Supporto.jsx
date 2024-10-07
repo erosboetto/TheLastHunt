@@ -1,38 +1,63 @@
 // FaqPage.js
 import React, { useEffect, useState } from 'react';
+import { Container, Form, Button } from 'react-bootstrap';
 import './Supporto.css'
 
 const FaqPage = () => {
-  const [faqs, setFaqs] = useState([]);
+  const [email, setEmail] = useState('');
+  const [problem, setProblem] = useState('');
+  const [image, setImage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  // Chiamata API per ottenere le FAQ
-  const fetchFaqs = async () => {
-    console.log('supporto');
-    try {
-      const response = await fetch('http://localhost:5000/api/faqs');
-      const data = await response.json();
-      setFaqs(data);
-    } catch (error) {
-      console.error('Errore nel recuperare le FAQ:', error);
-    }
-  };
 
-  // Esegui la chiamata API quando il componente viene montato
-  useEffect(() => {
-    fetchFaqs();
-  }, []);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+  }
+
 
   return (
-    <div className='div_color'>
-      <h1>Domande Frequenti</h1>
-      <ul>
-        {faqs.map((faq, index) => (
-          <li key={index}>
-            <strong>{faq.question}</strong>
-            <p>{faq.answer}</p>
-          </li>
-        ))}
-      </ul>
+    <div className='div'>
+      <h1 className='title'>Supporto</h1>
+      <div className='line'></div>
+      <Container>
+      <Form onSubmit={handleSubmit}>
+        <h2>Compilare i campi sottostanti</h2>
+              <Form.Group controlId="formEmail" className="mt-3">
+                <Form.Control
+                  type="email"
+                  placeholder="Inserisci email*"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="formEmail" className="mt-3">
+                <Form.Control
+                  type="problem"
+                  placeholder="Scrivi qui il problema riscontrato*"
+                  value={problem}
+                  onChange={(e) => setProblem(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="formEmail" className="mt-3">
+                <Form.Control
+                  type="img"
+                  placeholder="Inserisci immagine del problema (facoltativo)"
+                  value={image}
+                  onChange={(e) => setImage(e.target.value)}
+                />
+              </Form.Group>
+
+            {/* Messaggio di errore in caso di fallimento */}
+            {errorMessage && <p className="text-danger mt-3">{errorMessage}</p>}
+
+            <Button variant="primary" type="submit" className="mt-3">
+              invio
+            </Button>
+          </Form>
+      </Container>
     </div>
   );
 };
