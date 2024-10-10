@@ -7,13 +7,13 @@ import ModalContext from './context/ModalContext';
 import { AuthProvider } from './context/AuthContext';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './components/home/Home.jsx';
-import Character from './components/character/Character.jsx';
-import Weapon from './components/weapon/Weapon.jsx';
-import Planet from './components/planet/Planet.jsx';
-import SupportForm from './components/help-page/SupportForm.jsx';
-import Requirements from './components/help-page/Requirements.jsx';
-import Info from './components/info/Info.jsx';
+import Home from './components/home/Home';
+import Character from './components/character/Character';
+import Weapon from './components/weapon/Weapon';
+import Planet from './components/planet/Planet';
+import SupportForm from './components/help-page/SupportForm';
+import Requirements from './components/help-page/Requirements';
+import Info from './components/info/Info';
 
 const App = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
