@@ -1,7 +1,7 @@
 main {
     margin: 0;
     padding: 0;
-    background-image: url('./components/img/background_.jpg'); /* Percorso dell'immagine locale */
+    background-image: url('./assets/img/background_.jpg'); /* Percorso dell'immagine locale */
     background-size: cover; /* L'immagine copre tutto lo spazio disponibile */
     background-position: center; /* L'immagine è centrata */
     background-repeat:repeat-y; /* L'immagine non si ripete */

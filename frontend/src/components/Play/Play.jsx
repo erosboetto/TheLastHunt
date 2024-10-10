@@ -3,7 +3,7 @@ import { Button, Container } from 'react-bootstrap';
 import './Play.css';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import video from '../img/video.mp4'
+import video from '../../assets/video/video.mp4'
 
 
 const renderTooltip = (props) => (

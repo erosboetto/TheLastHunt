@@ -3,11 +3,12 @@ import './App.css'
 import MyNav from './components/Navbar/MyNav'
 import MyFooter from './components/Footer/MyFooter'
 import Home from './components/Home/Home'
-import Personaggi from './components/Personaggi/Personaggi'
-import Armi from './components/Armi/Armi'
-import FaqPage from './components/Supporto/Supporto'
-import Requisiti from './components/Supporto/Req'
-import { Container } from 'react-bootstrap'
+import Character from './components/character/Character';
+import Weapon from './components/weapon/Weapon';
+import Planet from './components/planet/Planet';
+import SupportForm from './components/help-page/SupportForm';
+import Requirements from './components/help-page/Requirements';
+import Info from './components/info/Info';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -18,10 +19,12 @@ function App() {
         <div className='app-bg'> {/* da modificare in file apposito container */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Personaggi" element={<Personaggi />} />
-            <Route path="/Armi" element={<Armi />} />
-            <Route path="/Supporto/Faq" element={<FaqPage />} />
-            <Route path="/Supporto/Req" element={<Requisiti />} />
+            <Route path='/info' element={<Info />} />
+            <Route path="/planets" element={<Planet />} />
+            <Route path="/characters" element={<Character />} />
+            <Route path="/weapons" element={<Weapon />} />
+            <Route path="/support-form" element={<SupportForm />} />
+            <Route path="/requirements" element={<Requirements />} />
           </Routes>
         </div>
       <MyFooter />
