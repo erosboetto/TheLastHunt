@@ -2,14 +2,13 @@ import express from 'express';
 
 const router = express.Router();
 
-const support = {
-        email: "Inserisci la tua email",
-        problem: "inserisci il problema",
-        img: "Allega un immagine dell'errore"
+router.post('/', (req, res) => {
+    const output = {
+        ...req.body,
+        message: "Email sent successfully!"
     };
 
-router.get('/', (req, res) => {
-    res.status(200).json(support);
-});
+    res.status(201).json(output);
+})
 
 export default router
