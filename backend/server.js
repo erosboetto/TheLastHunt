@@ -32,3 +32,5 @@ app.use('/api/planets', planetsRoutes);
 app.listen(PORT, () => {
   console.log(`Server is listening at port ${PORT}`)
 })
+
+export default app
