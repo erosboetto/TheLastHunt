@@ -23,14 +23,14 @@ app.use(morgan('dev'));
 
 connectDB();
 
-app.use('/api/auth', authRoutes);
-app.use('/api/weapons', weaponsRoutes);
-app.use('/api/characters', charactersRoutes);
-app.use('/api/support', supportRoutes);
-app.use('/api/planets', planetsRoutes);
+app.use('/auth', authRoutes);
+app.use('/weapons', weaponsRoutes);
+app.use('/characters', charactersRoutes);
+app.use('/support', supportRoutes);
+app.use('/planets', planetsRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is listening at port ${PORT}`)
 })
 
-export default app
+export default app;
