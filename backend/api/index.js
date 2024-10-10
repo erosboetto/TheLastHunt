@@ -33,4 +33,4 @@ app.use('/planets', planetsRoutes);
 //   console.log(`Server is listening at port ${PORT}`)
 // })
 
-module.exports = app;
+export default app;
