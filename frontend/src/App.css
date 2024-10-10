@@ -1,29 +1,62 @@
-main {
-    margin: 0;
-    padding: 0;
-    background-image: url('./assets/img/background_.jpg'); /* Percorso dell'immagine locale */
-    background-size: cover; /* L'immagine copre tutto lo spazio disponibile */
-    background-position: center; /* L'immagine è centrata */
-    background-repeat:repeat-y; /* L'immagine non si ripete */
-    filter: saturate(85%);
-}
-html{
-    overflow-x: hidden;
+:root {
+  --primary-color: #13e3fe;
+  --background-overlay: rgba(0, 0, 0, 0.65);
 }
 
-.app-bg {
-    color: white;
-    height: 150vh; /* Altezza intera della viewport */
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border-color: red;
-    border-style: solid;
-    border-width: 5px;   */
-    position: relative;
-    overflow: visible;
-    background-color: rgba(0, 0, 0, 0.65);
-    color: white; 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  background: url("./assets/img/background_.jpg") center/cover no-repeat fixed;
+  position: relative;
+  padding: 2rem;
+}
+
+.app-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-overlay);
+  z-index: -1;
+}
+
+.app-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.modal {
+  z-index: 1050;
+}
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.close-modal-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-modal-button:hover {
+  background-color: #d32f2f;
 }

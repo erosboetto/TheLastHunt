@@ -1,0 +1,22 @@
+.footer {
+  background-color: #000;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.footer-text {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-text strong {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .footer-text {
+    font-size: 1rem;
+  }
+}

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import axios from "axios";
+import { baseUrl } from "../../helpers/const";
 import "./Character.css";
 
 const Character = ({ id }) => {
   const [characters, setCharacters] = useState([]);
   const fetchCharacters = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/characters");
+      const response = await axios.get(`${baseUrl}/api/characters`);
       return response.data;
     } catch (error) {
       throw new Error("Something went wrong");

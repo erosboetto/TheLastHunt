@@ -1,45 +1,94 @@
-.d_carousel {
-    width: 45em;
-    height: 50%;
-    /* border-color: green;
-    border-style: solid;
-    border-width: 5px; */
-    overflow: visible;
-    position: relative;
-    background-color: black;
-    filter: opacity(80%);
-    border-bottom: transparent;
+.planets-container {
+  padding: 2rem 0;
+  color: #fff;
 }
 
-.posizione {
-    /* border-color: yellow;
-    border-style: solid;
-    border-width: 5px; */
-    height: 100%;   
-    display: flex;
-    justify-content: center;
-    color: white;
-    position: relative;
-    overflow: visible;
-    margin-top: 2em;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  border-radius: 50%; /* Aggiungi bordi arrotondati se vuoi */
-  width: 50px;
-  height: 50px;    
-}
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-  transform: scale(1.2); /* Ingrandisce l'icona al passaggio del mouse */
-}
-.desc {
-  /* border-color: greenyellow;
-  border-style: solid;
-  border-width: 5px; */
-  font-size: large;
+.planets-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   text-align: center;
-  background-color: black;
-  filter: opacity(80%);
+  color: var(--primary-color);
+}
+
+.planet-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.planet-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+
+.planet-card:hover {
+  transform: scale(1.05);
+}
+
+.caption-background {
+  padding: 1.5em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #ffffff;
+}
+
+.caption-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.desc {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.5em;
+}
+
+@media (max-width: 576px) {
+  .characters-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .planet-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .characters-container {
+    padding: 1rem 0;
+  }
+
+  .characters-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .planet-image {
+    height: 200px;
+  }
+
+  .caption-title {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .caption-title {
+    font-size: 2rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
 }

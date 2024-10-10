@@ -1,0 +1,70 @@
+/* SupportForm.css */
+.support-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+
+.support-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.support-form {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    padding: 1rem;
+  }
+
+  .support-title {
+    font-size: 2rem;
+  }
+
+  .support-form {
+    padding: 1rem;
+  }
+}
