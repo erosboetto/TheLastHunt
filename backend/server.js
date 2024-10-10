@@ -10,7 +10,7 @@ import charactersRoutes from './routes/characters.js';
 import supportRoutes from './routes/support.js'
 import planetsRoutes from './routes/planets.js'
 
-const PORT = process.env.PORT || 4000
+// const PORT = process.env.PORT || 4000
 
 dotenv.config();
 
@@ -29,8 +29,8 @@ app.use('/characters', charactersRoutes);
 app.use('/support', supportRoutes);
 app.use('/planets', planetsRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server is listening at port ${PORT}`)
-})
+// app.listen(PORT, () => {
+//   console.log(`Server is listening at port ${PORT}`)
+// })
 
 export default app;
