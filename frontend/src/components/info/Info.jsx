@@ -13,7 +13,14 @@ const Info = () => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        const headerOffset = 100; 
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+  
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
       }
     }
   }, [location]);

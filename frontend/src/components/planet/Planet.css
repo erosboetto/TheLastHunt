@@ -1,36 +1,52 @@
-.d_carousel {
-    width: 45em;
-    height: 50%;
-    overflow: visible;
-    position: relative;
-    background-color: black;
-    filter: opacity(80%);
-    border-bottom: transparent;
+.carousel-dimension {
+  width: 50%;
+  height: 85vh;
+  box-shadow: 0 0 .2rem #13e3fe,
+    0 0 .2rem #fff,
+    0 0 2rem #13e3fe,
+    0 0 0.8rem #13e3fe,
+    0 0 1rem #13e3fe,
+    inset 0 0 1.3rem #13e3fe;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5%;
 }
 
-.posizione {
-    height: 100%;   
-    display: flex;
-    justify-content: center;
-    color: white;
-    position: relative;
-    overflow: visible;
-    margin-top: 2em;
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  margin-top: 2em;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 5em;
+  overflow: visible;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  border-radius: 50%; /* Aggiungi bordi arrotondati se vuoi */
+  border-radius: 50%;
   width: 50px;
-  height: 50px;    
+  height: 50px;
 }
+
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-  transform: scale(1.2); /* Ingrandisce l'icona al passaggio del mouse */
+  transform: scale(1.2);
 }
-.desc {
-  font-size: large;
-  text-align: center;
-  background-color: black;
-  filter: opacity(80%);
+
+.image-carousel {
+  width: 80%;
+  padding: 1em;
+  border-radius: 10%;
+}
+
+.carousel-description {
+  font-size: 1.1em;
+  padding: 0.5em;
 }

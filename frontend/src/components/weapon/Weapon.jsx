@@ -25,13 +25,14 @@ const Weapon = ({ id }) => {
         {weapons && weapons.length > 0 && weapons.map((weapon) => (
           <Col key={weapon._id}>
             <Card className="h-100 weapon-card">
-            {weapon.img && (
-                    <Card.Img
-                      variant="top"
-                      src={weapon.img}
-                      alt={weapon.name}
-                    />
-                  )}
+              {weapon.img && (
+                <Card.Img
+                  variant="top"
+                  className="weapon-image"
+                  src={weapon.img}
+                  alt={weapon.name}
+                />
+              )}
               <Card.Body>
                 <Card.Title>{weapon.name}</Card.Title>
                 <Card.Text>{weapon.description}</Card.Text>

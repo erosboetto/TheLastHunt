@@ -3,9 +3,6 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    /* border-color: yellow;
-    border-style: solid;
-    border-width: 5px;   */
 }
 .desc {
     text-align: center;
@@ -31,9 +28,6 @@
     inset 0 0 1.3rem #13e3fe;
 }
 .download{
-    /* border-color: yellow;
-    border-style: solid;
-    border-width: 5px; */
     width: 80%;
     height: 16%;
     margin: auto;

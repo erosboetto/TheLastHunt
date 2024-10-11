@@ -70,7 +70,7 @@ const MyNav = () => {
         data-bs-theme="dark"
         sticky='top'
       >
-        <Container fluid>
+        <Container fluid >
           <Link to="/" className='link'>
             <Navbar.Brand>
               <img
