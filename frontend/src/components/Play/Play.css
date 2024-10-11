@@ -1,0 +1,93 @@
+.cont {
+    height: 75vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+.paragrafo {
+    font-size: 4em;
+    margin-top: 1em;
+}
+.icona {
+    fill: white;
+    transition: fill 0.8s ease; /* Transizione per l'effetto */
+    width: 3em;
+    transform: rotate(+45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.8em;
+    margin-top: 0.8em;
+}
+/* .icona:hover {
+    transform: scale(1.2);
+} */
+.triangle-button {
+    width: 6em;
+    transform: rotate(-45deg);
+    height: 6em;
+    border-radius: 0;
+    background-color: transparent;
+    border: 5px solid white;
+
+}
+.triangle-button:checked,
+.triangle-button:hover {
+    background-color: transparent;
+    border: 5px solid white;
+}
+.primo-piano {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1; /* Assicura che il contenuto sia sopra il video */
+}
+.video-background {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover; /* Mantiene il video coperto anche se le proporzioni cambiano */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    color: white;
+    margin-top: 0.3em;
+  }
+
+  .piattaforme {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Posiziona gli elementi in riga */
+    justify-content: space-between; /* Spazia le icone in modo uniforme */
+    align-items: center;
+    flex-direction: row;
+  }
+  .piattaforme li {
+    margin: 0 1em; /* Spazio tra le icone */
+  }
+  .piattaforme li:hover {
+    transform: scale(1.2); /* Ingrandisce l'icona al passaggio del mouse */
+  }
+  .piattaforme li a {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-decoration: none;
+  }
+  .piattaforme li a svg {
+    display: flex;
+    fill: white;
+    width: 2em;
+  }
+  .piattaforme li a span {
+    margin: 10px;
+    font-size: 1.3em;
+  }

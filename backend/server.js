@@ -10,7 +10,7 @@ import charactersRoutes from './routes/characters.js';
 import supportRoutes from './routes/support.js'
 import planetsRoutes from './routes/planets.js'
 
-// const PORT = process.env.PORT || 4000
+ const PORT = process.env.PORT || 4000
 
 dotenv.config();
 
@@ -23,14 +23,12 @@ app.use(morgan('dev'));
 
 connectDB();
 
-app.use('/auth', authRoutes);
-app.use('/weapons', weaponsRoutes);
-app.use('/characters', charactersRoutes);
-app.use('/support', supportRoutes);
-app.use('/planets', planetsRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/weapons', weaponsRoutes);
+app.use('/api/characters', charactersRoutes);
+app.use('/api/support', supportRoutes);
+app.use('/api/planets', planetsRoutes);
 
-// app.listen(PORT, () => {
-//   console.log(`Server is listening at port ${PORT}`)
-// })
-
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server is listening at port ${PORT}`)
+})

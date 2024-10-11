@@ -33,14 +33,14 @@ const SupportForm = () => {
       if (formData.file) {
         formDataToSend.append('file', formData.file);
       }
-  
+
       const response = await axios.post(`${baseUrl}/api/support`, formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`,
         },
       });
-  
+
       setFormResponse(response.data.message);
 
       setFormData({
@@ -52,55 +52,59 @@ const SupportForm = () => {
       if (e.target.file) {
         e.target.file.value = "";
       }
-      
+
       console.log("Form submitted:", formData);
     } catch (error) {
-      setErrorMessage(error.message);
+      console.log(error.message);
+      setErrorMessage("Non hai eseguito l'accesso");
     }
   };
 
   return (
-    <Container className="support-container">
-      <h1 className="support-title">Support</h1>
-      <Form className="support-form" onSubmit={handleSubmit}>
-        <h2>Please fill in the fields below</h2>
-        <Form.Group controlId="formEmail" className="form-group">
-          <Form.Control
-            type="email"
-            placeholder="Enter email*"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
-        <Form.Group controlId="formProblem" className="form-group">
-          <Form.Control
-            as="textarea"
-            rows={3}
-            placeholder="Describe the problem you encountered*"
-            name="text"
-            value={formData.text}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
-        <Form.Group controlId="formImage" className="form-group">
-          <Form.Control
-            type="file"
-            accept="image/*"
-            name="file"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <Button variant="primary" type="submit" className="btn-submit">
-          Submit
-        </Button>
-      </Form>
+    <div className='div'>
+      <h1 className='title'>Supporto</h1>
+      <div className='line'></div>
+      <Container className="support-container">
+        <Form className="support-form" onSubmit={handleSubmit}>
+          <h2>Please fill in the fields below</h2>
+          <Form.Group controlId="formEmail" className="form-group">
+            <Form.Control
+              type="email"
+              placeholder="Enter email*"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formProblem" className="form-group">
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Describe the problem you encountered*"
+              name="text"
+              value={formData.text}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formImage" className="form-group">
+            <Form.Control
+              type="file"
+              accept="image/*"
+              name="file"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+          <Button variant="primary" type="submit" className="btn-submit">
+            Submit
+          </Button>
+        </Form>
 
-      <p>{formResponse && formResponse}</p>
-    </Container>
+        <p>{formResponse && formResponse}</p>
+      </Container>
+    </div>
   );
 };
 

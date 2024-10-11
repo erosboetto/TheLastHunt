@@ -21,31 +21,29 @@ const Weapon = ({ id }) => {
 
   return (
     <Container id={id} className="weapons-container">
-      <h2 className="text-center mb-4">Weapons</h2>
       <Row xs={1} md={2} lg={3} className="g-4">
-        {weapons &&
-          weapons.length > 0 &&
-          weapons.map((weapon) => (
-            <Col key={weapon._id}>
-              <Card className="h-100 weapon-card">
-                <Card.Img
-                  variant="top"
-                  src={weapon.img}
-                  alt={weapon.name}
-                  className="weapon-image"
-                />
-                <Card.Body>
-                  <Card.Title>{weapon.name}</Card.Title>
-                  <Card.Text>{weapon.description}</Card.Text>
-                  {weapon.munitions && weapon.munitions > 0 && (
-                    <Card.Text className="munitions">
-                      Munitions: {weapon.munitions}
-                    </Card.Text>
+        {weapons && weapons.length > 0 && weapons.map((weapon) => (
+          <Col key={weapon._id}>
+            <Card className="h-100 weapon-card">
+            {weapon.img && (
+                    <Card.Img
+                      variant="top"
+                      src={weapon.img}
+                      alt={weapon.name}
+                    />
                   )}
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
+              <Card.Body>
+                <Card.Title>{weapon.name}</Card.Title>
+                <Card.Text>{weapon.description}</Card.Text>
+                {weapon.munitions > 0 && (
+                  <Card.Text className="munitions">
+                    Munitions: {weapon.munitions}
+                  </Card.Text>
+                )}
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );

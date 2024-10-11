@@ -1,36 +1,43 @@
-import { Container } from "react-bootstrap";
 import "./Info.css";
 import Character from "../character/Character";
 import Planet from "../planet/Planet";
 import Weapon from "../weapon/Weapon";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 
 const Info = () => {
-  return (
-    <>
-      <Container className="mb-4">
-        <ul className="nav justify-content-center">
-          <li className="nav-item">
-            <a className="nav-link" href="#characters">
-              Characters
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#planets">
-              Planets
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#weapons">
-              Weapons
-            </a>
-          </li>
-        </ul>
-      </Container>
+  const location = useLocation();
 
-        <Character id="characters" />
-        <Planet id="planets" />
-        <Weapon id="weapons" />
-    </>
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  return (
+    <div className='div'>
+      <section id="characters">
+        <h1 className='title'>Personaggi</h1>
+        <div className='line'></div>
+        <Character />
+      </section>
+
+      <section id="planets">
+        <h1 className='title'>Pianeti</h1>
+        <div className='line'></div>
+        <Planet />
+      </section>
+
+      <section id="weapons">
+        <h1 className='title'>Armi</h1>
+        <div className='line'></div>
+        <Weapon />
+      </section>
+    </div>
   );
 };
 
