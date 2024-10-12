@@ -66,11 +66,11 @@ const SupportForm = () => {
       <div className='line'></div>
       <Container className="support-container">
         <Form className="support-form" onSubmit={handleSubmit}>
-          <h2>Please fill in the fields below</h2>
+          <h2>Compila i campi qui sotto grazie</h2>
           <Form.Group controlId="formEmail" className="form-group">
             <Form.Control
               type="email"
-              placeholder="Enter email*"
+              placeholder="Inserisci email*"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -81,7 +81,7 @@ const SupportForm = () => {
             <Form.Control
               as="textarea"
               rows={3}
-              placeholder="Describe the problem you encountered*"
+              placeholder="Descrivi l'anomalia riscontrata*"
               name="text"
               value={formData.text}
               onChange={handleChange}
@@ -98,7 +98,7 @@ const SupportForm = () => {
           </Form.Group>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <Button variant="primary" type="submit" className="btn-submit">
-            Submit
+            Invia
           </Button>
         </Form>
 

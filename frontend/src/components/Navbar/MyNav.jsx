@@ -135,7 +135,7 @@ const MyNav = () => {
         keyboard
       >
         <Modal.Header closeButton className="closebutton">
-          <Modal.Title>{isLogin ? "Login" : "Register"}</Modal.Title>
+          <Modal.Title>{isLogin ? "Accesso" : "Registrazione"}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
@@ -145,7 +145,7 @@ const MyNav = () => {
                 <Form.Label>Username</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter username"
+                  placeholder="inserisci username*"
                   name="username"
                   value={formData.username}
                   onChange={handleInputChange}
@@ -158,7 +158,7 @@ const MyNav = () => {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter email"
+                placeholder="Inserisci email*"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
@@ -170,7 +170,7 @@ const MyNav = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Enter password"
+                placeholder="Inserisci password*"
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
@@ -181,15 +181,15 @@ const MyNav = () => {
             {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
             <Button variant="primary" type="submit">
-              {isLogin ? "Login" : "Register"}
+              {isLogin ? "Accedi" : "Registrati"}
             </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="link" onClick={toggleLoginRegister}>
             {isLogin
-              ? "Don't have an account? Register"
-              : "Already have an account? Login"}
+              ? "Non hai un account? Registrati"
+              : "Hai già un account? Accedi"}
           </Button>
         </Modal.Footer>
       </Modal>

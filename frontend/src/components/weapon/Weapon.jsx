@@ -38,7 +38,7 @@ const Weapon = ({ id }) => {
                 <Card.Text>{weapon.description}</Card.Text>
                 {weapon.munitions > 0 && (
                   <Card.Text className="munitions">
-                    Munitions: {weapon.munitions}
+                    Munizioni: {weapon.munitions}
                   </Card.Text>
                 )}
               </Card.Body>
